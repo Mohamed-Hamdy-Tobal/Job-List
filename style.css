@@ -1,0 +1,385 @@
+:root {
+    --color-one:  #2779B0;
+    --color-two:  #587D2B;
+    --color-three:  #8e44ad;
+    --color-four:  #f3f6f9;
+    --color-five:  #b2b1b1;
+    --color-six:  #0F3A57 ;
+    --color-seven: #6c6d6e;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------- */
+
+/* -- Starts Global Rules -- */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior :smooth;
+}
+
+body {
+    background-color: var(--color-four);
+    font-family: MontserratRegular, sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right : 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small Screen */
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Meduim Screen */
+@media (min-width : 992px) {
+    .container {
+        width:970px;
+    }
+}
+/* Large Screen */
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* -- Ends Global Rules -- */
+
+/* ------------------------------------------------------------ */
+
+
+/* -- Start Head --- */
+.container .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .head h1 {
+    font-weight: 500;
+    position : relative;
+    margin: 30px 0px;
+}
+.container .head h1::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background-color: var(--color-one);
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px 0px;
+
+}
+
+.container .head p {
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 1px;
+    width: 100%;
+    margin: 30px 0px;
+    line-height: 30px;
+}
+
+/* The Media Of Head */
+/* Small Screen */
+@media (max-width : 768px) {
+    .container .head h1 {
+        font-size: 26px;
+    }
+}
+
+/* -- End Head -- */
+
+/* Start Main */
+.container .main {
+    background-color: white;
+    margin: 10px auto 10px 50px;
+    position: relative;
+}
+.container .main::after {
+    content: "Featured";
+    position: absolute;
+    background-color: white;
+    width: 115px;
+    height: 20px;
+    top: 46px;
+    left: -90px;
+    text-align: center;
+    padding: 10px;
+    transform: rotate(-90deg);
+    font-size: 20px;
+    /* border-bottom: 1px solid #999; */
+    border-top: 4px solid var(--color-one);
+    color: #333;
+}
+.container .main .job {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    border-bottom: 2px solid var(--color-four);
+}
+
+/* The Image */
+.container .main img {
+    width: 200px;
+}
+
+.container .main .image {
+    background-color: var(--color-four);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+/* The Info */
+/* .container .main .job .info {
+    margin-right: 25px;
+    width: 400px;
+} */
+.container .main .info h5 {
+    padding: 4px 15px;
+    width: fit-content;
+    background: var(--color-two);
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+.container .main .info p {
+    font-size: 27px;
+    letter-spacing: -1px;
+    margin: 22px 0px 13px 0px;
+}
+.container .main .autor {
+    color: #151515;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.container .main .autor span{
+    color: var(--color-five);
+    user-select: none;
+}
+.container .main .autor p {
+    margin: 0;
+    font-size: 16px;
+    display: inline;
+}
+
+/* The Country */
+.container .main .country {
+    padding: 25px 57px 25px 25px;
+    text-align: center;
+}
+.container .main h3 {
+    font-size: 17px;
+}
+.container .main p {
+    color : #333;
+}
+
+/* The Price  */
+.container .main .price {
+    text-align: center;
+}
+.container .main .price p {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container .main .button {
+    background: var(--color-one);
+    color: #ffffffd9;
+    cursor: pointer;
+    padding: 4px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    width : 140px
+}
+.container .main .job-three  .info h5,
+.container .main .job-four  .info h5,
+.container .main .job-six  .info h5 {
+    background-color: var(--color-one);
+}
+ 
+
+/* The Media */
+/* Small Screen */
+@media (max-width : 768px) {
+    .container .main {
+        width: 290px;
+        margin: 0px auto;
+    }
+    .container .main .job {
+        flex-direction: column;
+        position: relative;
+        width: 97%;
+    }
+    .container .main .image {
+        margin-top: 50px;
+    }
+    .container .main .info {
+        width: 100%;
+        margin: 0px;
+    }
+    .container .main .job .info h5{
+        position: absolute;
+        top: 25px;
+        font-size: 12px;
+        margin: 0px;
+    }
+    .container .main .info > p{
+        font-size: 20px;
+        text-align: center;
+        margin: 25px auto;
+    }
+    .container .main .autor {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70px;
+        text-align: center;
+        width: 100%;
+    }
+    .container .main .country {
+        position: absolute;
+        top: 0%;
+        right: 5%;
+        padding: 0px;
+    }
+    .container .main .country h3{
+        margin-bottom: 10px;
+    }
+    .container .main .country p{
+        margin-top: 5px;
+    }
+    .container .main .country p {
+        font-size: 8px;
+    }
+
+
+}
+/* Meduim Screen */
+@media (min-width : 769px) and (max-width : 992px){
+    .container .main .job{
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    .container .main .job .image, 
+    .container .main .job .info {
+        width: 45%;
+    }
+    .container .main .job img {
+        width: 100%;
+    }
+    .container .main .job .country {
+        display: none;
+    }
+    .container .main .job .price {
+        margin : 10px auto
+    }
+    .container .main .autor{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70px;
+    }
+    .container .main .info > p{
+        font-size: 22px;
+        margin: 13px 0px;
+    }
+    .container .main .price .button {
+        padding: 15px 20px;
+    }
+    .container .main .country p {
+        font-size: 10px;
+    }
+}
+/* Large Screen */
+@media (min-width : 993px) and (max-width : 1199px) {
+    .container .main .info {
+        margin: 0px 0px 0px 20px;
+        width: 32%;
+    }
+    .container .main .info h5{
+        margin: 0;
+        transform: translateY(5px);
+        font-size: 12px;
+    }
+    .container .main .info > p{
+        font-size: 18px;
+        letter-spacing: .5px;
+        margin-bottom: 15px;
+    }
+    .container .main .autor {
+        flex-direction: column;
+        height: 70px;
+    }
+    .container .main .country p {
+        font-size: 12px;
+    }
+
+
+}
+/* X-Large Media */
+@media (min-width: 1200px) {
+    .container .main .job .image {
+        width: 20%;
+    }
+    .container .main .job .info {
+        width: 40%;
+    }
+    .container .main .job .country,
+    .container .main .job .price {
+        width: 15%;
+    }
+
+
+    .container .main .country p {
+        font-size: 11px;
+    }
+}
+
+/* End Main */
+
+/* The Buttom */
+.container .e-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+}
+.container .e-button button {
+    border: none;
+    background: var(--color-one);
+    color: white;
+    padding: 20px 45px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .e-button button:hover {
+    background-color:#4b89b3;
+}
+
+
+@media (max-width : 767px) {
+        
+    .container .e-button > button {
+        padding: 16px 35px;
+        font-size: 15px;
+    }
+
+}
